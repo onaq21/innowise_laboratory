@@ -1,2 +1,3 @@
-# innowise_laboratory
-Here are my tasks from the Innowise Python courses
+# Python Training
+
+This repository contains Python assignments from the Innowise training course
