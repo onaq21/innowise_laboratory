@@ -1,0 +1,17 @@
+# PyCharm / IntelliJ IDEA project files
+.idea/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environments
+venv/
+.venv/
+.env/
+
+# UV lock file
+uv.lock
+
+# Python version file
+.python-version
