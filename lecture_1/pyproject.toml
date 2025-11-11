@@ -1,8 +1,10 @@
 [project]
 name = "lecture-1"
 version = "0.1.0"
-description = "Add your description here"
-readme = "README.md"
+description = ""
+authors = [
+    {name = "Kostya Kudritsky", email = "koctya1423@gmail.com"}
+]
 requires-python = ">=3.9"
 dependencies = [
     "colorama>=0.4.6",
