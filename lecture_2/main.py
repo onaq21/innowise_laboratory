@@ -1,19 +1,27 @@
 def  main():
     """Print user information and profile summary"""
-
-    user_name = input("Hello, enter your full name: ")
+    while True:
+        user_name = input("Hello, enter your full name: ")
+        if not valid_string(user_name):
+            continue
+        break
     while True:
         try:
             current_age = 2025 - int(input("Enter your birth year: "))
+            if not valid_age(current_age):
+                continue
             break
         except ValueError:
-            print("Please enter a valid year")
+            print("Invalid input, please try again")
     life_stage = generate_profile(current_age)
     hobbies = []
     print("Enter your favorite hobby (type 'stop' to finish): ")
     while True:
-        if (hobby := input().lower()) == "stop":
+        hobby = input().lower()
+        if hobby == "stop":
             break
+        elif not valid_string(hobby):
+            continue
         hobbies.append(hobby)
 
     user_profile = {
@@ -40,14 +48,27 @@ def  main():
 
 def generate_profile(age):
     """Return life stage"""
-    if age < 0:
-        return "Incorrect age"
-    elif 0 <= age <= 12:
+    if 0 <= age <= 12:
         return "Child"
     elif 13 <= age <= 19:
         return "Teenager"
     else:
         return "Adult"
+
+def valid_string(s):
+    """Check if string is valid"""
+    s = s.strip()
+    if not s or s.isdigit():
+        print("Invalid input, please try again")
+        return False
+    return True
+
+def valid_age(age):
+    """Check if age is valid"""
+    if age < 0 or age > 150:
+        print("Invalid input, please try again")
+        return False
+    return True
 
 if __name__ == "__main__":
     main()
