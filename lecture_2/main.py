@@ -46,7 +46,7 @@ def  main():
 
 
 
-def generate_profile(age):
+def generate_profile(age: int) -> str:
     """Return life stage"""
     if 0 <= age <= 12:
         return "Child"
@@ -55,7 +55,7 @@ def generate_profile(age):
     else:
         return "Adult"
 
-def valid_string(s):
+def valid_string(s: str) -> bool:
     """Check if string is valid"""
     s = s.strip()
     if not s or s.isdigit():
@@ -63,7 +63,7 @@ def valid_string(s):
         return False
     return True
 
-def valid_age(age):
+def valid_age(age: int) -> bool:
     """Check if age is valid"""
     if age < 0 or age > 150:
         print("Invalid input, please try again")
