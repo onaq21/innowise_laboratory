@@ -95,7 +95,7 @@ def show_report(students: list) -> None:
     if students_with_grades == 0:
         print("No student has any grades yet")
         return
-    print(f"-------------------------------"
+    print(f"-------------------------------\n"
           f"Max Average: {max_average:.1f}\n"
           f"Min Average: {min_average:.1f}\n"
           f"Overall Average: {(sum_average_grades / students_with_grades):.1f}\n"
