@@ -1,0 +1,10 @@
+[project]
+name = "book-api"
+version = "0.1.0"
+description = "Simple web API for managing a book collection"
+requires-python = ">=3.9"
+dependencies = [
+    "fastapi>=0.124.0",
+    "sqlalchemy>=2.0.44",
+    "uvicorn>=0.38.0",
+]
